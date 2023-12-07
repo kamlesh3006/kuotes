@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuote</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+    <div class="flex flex-col items-center" style="width: 200vw;">
+        <div class="bg-white w-full max-w-md p-1 rounded-lg shadow-md mt-4 my-4">
+            <img src="/img/logo1.png" class="rounded-lg" alt="">
+        </div>
+        <div class="bg-white w-full max-w-md p-8 rounded-lg shadow-md">
+            <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Login to Your Account</h1>
+
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-600">Email Address</label>
+                    <input type="email" id="email" name="email"
+                        class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-indigo-200 focus:outline-none" required="">
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-indigo-200 focus:outline-none" required="">
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" name="remember"
+                            class="h-4 w-4 text-indigo-600 focus:ring focus:ring-indigo-200">
+                        <label for="remember" class="ml-2 text-sm text-gray-600">Remember me</label>
+                    </div>
+                    <a href="#" class="text-sm text-indigo-600 hover:underline">Forgot your password?</a>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 focus:ring focus:ring-indigo-200 focus:outline-none">
+                    Sign In
+                </button>
+            </form>
+        </div>
+        
+        <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-md mt-4">
+            <p class="text-md text-gray-600 text-center">
+                Don't have an account? <a href="#" class="text-indigo-600 hover:underline">Sign up here</a>.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
