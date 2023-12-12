@@ -17,11 +17,11 @@
     </style>
 </head>
 
-<body class="bg-white h-screen flex items-center justify-center">
+<body class="bg-gray-100 h-screen flex items-center justify-center">
 
     <div class="flex flex-col items-center w-full max-w-2xl mx-auto">
         <div class="bg-white w-full max-w-md p-1 rounded-lg shadow-md mt-4 my-4">
-            <img src="/img/logo.png" class="rounded-lg" alt="">
+            <img src="../img/logo.png" class="rounded-lg" alt="">
         </div>
         <div class="bg-white w-full max-w-md p-8 rounded-lg shadow-md">
             <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Create Your Account</h1>
