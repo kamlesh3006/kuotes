@@ -1,3 +1,7 @@
+<?php
+include("connect.php");
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,22 +11,34 @@
     <title>Your Website</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/38bbbd6e81.js" crossorigin="anonymous"></script>
-    <script src="../tailwind.config.js"></script>  
+    <script src="../tailwind.config.js"></script> 
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        body {
+            margin-top: 80px;
+        }
+    </style> 
 </head>
 
 <body class="font-sans bg-white">
 
     <!-- Top Bar -->
-    <header class="p-8 px-16 bg-white">
+    <header class="p-8 bg-white">
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
-            <a href="home.html"><img src="/img/logo1.png" alt="Logo" class="h-7"></a>
+            <a href="home.php"><img src="../img/logo1.png" alt="Logo" class="h-7"></a>
 
             <!-- Power Button Icon for Logout -->
             <div class="text-xl">
-                <a href="profile.html"><i class="fa-solid fa-user px-2" style="color: #3E3E3F;"></i></a>
-                <a href="post.html"><i class="fa-regular fa-pen-to-square px-2" style="color: #3E3E3F;"></i></a>
-                <a href="#"><i class="fa-solid fa-power-off px-2" style="color: #3E3E3F;"></i></a>
+                <a href="profile.php"><i class="fa-solid fa-user px-2" style="color: #3E3E3F;"></i></a>
+                <a href="post.php"><i class="fa-regular fa-pen-to-square px-2" style="color: #3E3E3F;"></i></a>
+                <a href="logout.php"><i class="fa-solid fa-power-off px-2" style="color: #3E3E3F;"></i></a>
             </div>
         </div>
     </header>
