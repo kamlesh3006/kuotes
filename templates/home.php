@@ -1,6 +1,13 @@
 <?php
 include("connect.php");
 session_start();
+
+if(!isset($_SESSION["email"])){
+    echo "<script>alert('Login Unsuccessful!');</script>";
+    header("login.php");
+}
+
+$sortsql = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">

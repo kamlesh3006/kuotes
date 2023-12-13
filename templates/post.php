@@ -4,6 +4,7 @@ include("connect.php");
 
 // Check if the user is not logged in
 if (!isset($_SESSION['email'])) {
+    echo "<script>alert('Login Unsuccessful!');</script>";
     header("Location: login.php");
     exit();
 }
@@ -12,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mailid = $_SESSION["email"];
     $text = $_POST["text"];
     $date = date('l, F j, Y');
+    $currentDate = date("Y-m-d H:i:s");
     $getid = "SELECT userid FROM users WHERE email = '$mailid'";
     
     $result = $conn->query($getid);
@@ -20,13 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $postuserid = $row["userid"];
-            $postsql = "INSERT INTO quotes VALUES (null, '$postuserid', '$text', '$date')";
+            $postsql = "INSERT INTO quotes VALUES (null, '$postuserid', '$text', '$date', '$currentDate)";
             mysqli_query($conn, $postsql);
             echo "<script>alert('Successfully Posted!');</script>";
             echo "<script>window.location.href = 'home.php';</script>";
         }
     } catch (mysqli_sql_exception $e) {
-        echo "Error: " . $e->getMessage();
+        echo "Error : " . $e->getMessage();
         echo "<script>alert('Error Posting!');</script>";
         echo "<script>window.location.href = 'home.php';</script>";
     }
