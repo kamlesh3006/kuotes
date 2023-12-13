@@ -80,6 +80,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $hashedPassword = $row["password"];
             if(password_verify($password, $hashedPassword)){
                 $_SESSION["email"] = $row["email"];
+                $_SESSION["userid"] = $row["userid"];
+                $_SESSION["username"] = $row["fname"] . " " . $row["lname"];
+                #echo "<script>alert('". $_SESSION["username"] ."');</script>";
                 echo "<script>window.location.href = 'home.php'</script>";
             } else{
                 echo "<script>alert('Invalid credentials!');</script>";

@@ -21,16 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            $postuserid = $row["userid"];
-            $postsql = "INSERT INTO quotes VALUES (null, '$postuserid', '$text', '$date', '$currentDate)";
+            $postuserid = $row["userid"];   
+            $postsql = "INSERT INTO quotes VALUES (null, '$postuserid', '$text', '$date', '$currentDate')";
             mysqli_query($conn, $postsql);
             echo "<script>alert('Successfully Posted!');</script>";
             echo "<script>window.location.href = 'home.php';</script>";
         }
     } catch (mysqli_sql_exception $e) {
         echo "Error : " . $e->getMessage();
-        echo "<script>alert('Error Posting!');</script>";
-        echo "<script>window.location.href = 'home.php';</script>";
     }
 }
 ?>
@@ -68,11 +66,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         button:hover{
             background-color : #2b2b2b;
         }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem; /* Adjust the padding as needed */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 3;
+        }
+        section {
+            min-height: 90vh;
+            position: relative;
+            z-index: 2;
+        }
+        body {
+            margin-top: 10vh;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the entire screen */
+            z-index: -1;
+            filter: blur(3px);
+            opacity: 80%;
+        }
     </style>
 </head>
 
 <body class="bg-white">
-
+<div class="container">
+    
+    <img src="../img/Untitled.png" class="bg-image">
     <!-- Top Bar -->
     <header class="p-8 bg-white">
         <div class="container mx-auto flex items-center justify-between">
@@ -124,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </div>
         </div>
     </section>
-
+</div>
 </body>
 
 </html>
