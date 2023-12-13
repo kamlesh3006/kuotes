@@ -4,7 +4,8 @@ session_start();
 
 if(!isset($_SESSION["email"])){
     echo "<script>alert('Login Unsuccessful!');</script>";
-    header("login.php");
+    echo "<script>window.location.href = 'login.php'</script>";
+    exit;
 }
 ?>
 <!DOCTYPE html>

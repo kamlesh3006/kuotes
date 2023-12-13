@@ -124,19 +124,20 @@ $useremail = $_SESSION["email"]
                         <h1 class="text-2xl font-semibold px-2"><?php echo $nameofuser; ?></h1>
                         <p class="text-gray-600 text-xs px-2"><?php echo $useremail; ?></p>
                     </div>
+                    <div class="mt-4 md:mt-0 md-w-1/2">
+                        <p class="text-gray-400 text-justify text-sm">
+                            At "musewords," we prioritize your privacy and security. For your peace of mind, we've implemented
+                            robust measures to ensure that your personal information remains private and confidential. For
+                            privacy and anonymity, your name, email, and profile picture are hidden from other users. We've
+                            provided a default profile picture for you. Remember, your data is visible only to you and not to
+                            other users. Feel free to explore and share without worrying about your personal information being
+                            disclosed. Enjoy "musewords" with peace of mind!
+                            <br><br>
+                        </p>
+                    </div>
                 </div>
 
-                <div class="mt-4 md:mt-0 md-w-1/2">
-                    <p class="text-gray-400 text-justify text-sm">
-                        At "musewords," we prioritize your privacy and security. For your peace of mind, we've implemented
-                        robust measures to ensure that your personal information remains private and confidential. For
-                        privacy and anonymity, your name, email, and profile picture are hidden from other users. We've
-                        provided a default profile picture for you. Remember, your data is visible only to you and not to
-                        other users. Feel free to explore and share without worrying about your personal information being
-                        disclosed. Enjoy "musewords" with peace of mind!
-                        <br><br>
-                    </p>
-                </div>
+                
             </div>
         </div>
         <section class="bg-transparent dark:bg-gray-900 py-4 lg:py-4 antialiased">
